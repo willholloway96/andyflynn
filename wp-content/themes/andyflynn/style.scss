@@ -1,0 +1,409 @@
+/*
+Theme Name: Point PR
+Author: Will Holloway
+Description: Musician Bio
+Version: 1
+*/
+
+// Variables
+
+$text-color: #fff;
+$text-color-hover: #000;
+$background: #1C3F45;
+$feed-color: #a4466a;
+$main-font: 'Quicksand', sans-serif;
+$title-font: 'Blenny', cursive;
+
+
+
+* {
+  box-sizing: border-box; }
+
+
+
+
+li {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+a {
+  width: 100%;
+  color: $text-color !important; 
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  text-decoration: none;
+  color: $text-color-hover !important;
+}
+
+img{
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+button {
+  display: block;
+  background-color: $feed-color;
+  margin: auto;
+  border-radius: 10px;
+  border: 1px solid #fff;
+}
+
+input, textarea {
+  width: 60%;
+  border-radius: 5px;
+  border: 1px solid #000;
+  margin: auto;
+}
+
+.row {
+  margin: 0;
+}
+
+*, *:before, *:after {box-sizing:  border-box !important;}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: $background;
+  color: $text-color;
+  font-family: $main-font;
+
+    header {
+      margin: 0;
+      padding: 0;
+      top: 0;
+      left: 0;
+
+        .row {
+          margin: 0;
+
+            .title {
+              padding: 0;
+              font-size: 35px;
+              margin: auto;
+              text-align: center;
+              display: inline-block;
+              font-family: $title-font;
+            }
+
+            .social_widget {
+              margin: auto;
+              padding: 0;
+
+                ul {
+                  padding: 0;
+                  list-style-type: none;
+                  display: -webkit-box;
+                  display: -webkit-flex;
+                  display: -ms-flexbox;
+                  display: flex;
+                  -webkit-flex-flow: row wrap;
+                  -ms-flex-flow: row wrap;
+                  flex-flow: row wrap;
+                  -webkit-box-pack: justify;
+                  -webkit-justify-content: space-between;
+                  -ms-flex-pack: justify; 
+                  justify-content: space-between;
+
+                    li {
+                      width: 30%;
+                      display: inline;
+                        a {
+                          text-decoration: none;
+                          color: $text-color;
+                          font: normal normal normal 35px/1 Genericons;
+
+                            span {
+                              display: none;
+                            }
+                        }
+
+                        a:hover {
+                          color: $text-color-hover;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    header:after {
+      content: '';
+      display: inline-block;
+      border-bottom: 1px solid $text-color-hover;
+      width: 30%;
+      position: absolute;
+      left: 35%;
+      right: 35%;
+      -webkit-transition: 1s ease;
+      transition: 1s ease;
+    }
+
+    header:hover:after { 
+      width: 100%; 
+      right: 0;
+      left: 0;
+    }
+
+    .home-content {
+       margin-top: 10px;
+
+        .side-bar {
+          border-right: 1px solid #000;
+          background-color: #0D6F7F;
+          margin:10px auto;
+        }
+
+        .main-feed {
+          -moz-column-count: 3;
+          -webkit-column-count: 3;
+          column-count: 3;
+          column-gap: 1em;
+
+            .content_widget {
+              display: inline-block;              
+              padding: 1em;
+              width: 100%;
+              background-color: $feed-color;
+              margin: 0;
+              -webkit-column-break-inside: avoid; 
+              page-break-inside: avoid;           
+              break-inside: avoid-column;            
+              break-inside: avoid;
+
+                .widget-container { 
+                  margin: 0;
+                  padding: 0;
+                  top: 0;
+                  display: inline-block;
+                  width: 100%;
+
+                .widgettitle {    
+                  width: 100%;
+                  margin: 0 auto;
+                  font-size: 1.5em;
+                }
+
+                .main-title {
+                  width: 100%;
+                  font-size: 150%;
+                  margin: 0;
+                }
+
+                .main-content {
+                  margin-top: 10px;
+                }
+
+                .gallery-row {
+                  margin: 0 auto;
+                }
+
+                .fb-page {
+                  margin: 0 auto;
+                }
+
+                .twitter-timeline {
+                  width: initial !important;
+                  margin: 0 auto;
+                }
+                }
+            }
+
+            .content_widget:after {
+              content: '';
+              display: inline-block;
+              margin-top: 10px;
+              border-bottom: 1px solid #000;
+              width: 30%;
+              position: absolute;
+              left: 35%;
+              right: 35%;
+              bottom: 0;
+              -webkit-transition: 1s ease;
+              transition: 1s ease;
+            }
+
+            .content_widget:hover:after { 
+              width: 100%; 
+              right: 0;
+              left: 0;
+            }
+        }
+        .social_content {
+
+        }
+    }
+
+    .about-container {
+      max-width: 960px;
+      margin: 10px auto;
+
+        .about-title {
+          text-align: center;
+
+        }
+
+        .about-image {
+          width: 30%;
+          border-radius: 50%;
+          border: 2px solid #000;
+
+        }
+
+        .triangle {
+          width:0;
+          height:0;
+          margin: auto;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-top: 10px solid #000;
+        }
+
+        .about-description {
+          max-width: 70%;
+          margin: 10px auto;
+
+        }
+    }
+
+    .gigpress-table {
+      max-width: 900px;
+      margin: 30px auto;
+
+        .gigpress-info-item {
+          display: inline-block;
+          background-color: #fff;
+          margin: 2px;
+          padding: 2px;
+
+            .gigpress-tickets-link {
+              color: #666;
+              margin-right: 0;
+
+            }
+        }
+
+        .gigpress-info-item:last-of-type {    
+          background-color: $feed-color;
+          margin: auto;
+          border-radius: 10px;
+        }
+    }
+
+    .gigpress-subscribe {
+      max-width: 900px;
+      margin: 30px auto;
+
+    }
+
+    .content-category {
+
+        .main-title {
+          font-size: 150%;
+        }
+    }
+
+    .content-category:after {
+      content: '';
+      display: inline-block;
+      margin-top: 10px;
+      border-bottom: 1px solid #fff;
+      width: 30%;
+      position: absolute;
+      left: 35%;
+      right: 35%;
+      -webkit-transition: 1s ease;
+      transition: 1s ease;
+    }
+
+    .content-category:hover:after { 
+      width: 100%; 
+      right: 0;
+      left: 0;
+    }
+
+    .wpcf7-form {
+      width: 100%;
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 20px;
+      color: $text-color-hover;
+
+        p {
+
+            label {
+              width: 100%;
+
+                span {
+
+                    textarea {
+                      width: 100%;
+                    }
+                }
+            }
+
+            .wpcf7-submit {
+              width: 25%;
+              color: $text-color;
+              background-color: #000;
+            }
+
+            .ajax-loader {
+              float: left;
+              width: 10px;
+            }
+        }
+
+        .wpcf7-validation-errors {
+          border: 1px solid #f00;
+          border-radius: 5px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 770px) {
+
+  .main-feed {
+    column-count: 2 !important;
+  }
+
+
+}
+
+
+@media screen and (max-width: 450px) {
+
+  .main-feed {
+    column-count: 1 !important;
+  }
+
+  input {
+    width: 100% !important;
+  }
+
+
+}
+
+@media screen and (max-width: 992px) {
+
+  .side-bar {
+    border-right: none !important;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+  }
+
+
+}
+
+
+
+
